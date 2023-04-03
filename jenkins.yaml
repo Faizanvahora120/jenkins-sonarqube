@@ -25,5 +25,5 @@ spec:
       volumes:
         - name: jenkins-data
           hostPath:
-            path: /opt/jenkins
+            path: /tmp/data
             type: Directory
