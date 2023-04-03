@@ -20,10 +20,10 @@ spec:
           - name: http-port
             containerPort: 8080
         volumeMounts:
-          - name: jenkins-data
-            mountPath: /var/jenkins_home
+            - name: jenkins-data
+              mountPath: /var/jenkins_home
       volumes:
-        - name: jenkins-data
-          hostPath:
-            path: /tmp/data
-            type: Directory
+       - name: jenkins-data
+         persistentVolumeClaim:
+             claimName: jenkins-pv-claim
+
