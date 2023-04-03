@@ -26,4 +26,4 @@ spec:
       volumes:
         - name: jenkins-data
           hostPath:
-            path: /tmp/data
+            path: /root/jenkins_home/
